@@ -7,13 +7,14 @@ class Boton {
     this.ancho = ancho;
     this.alto = alto;
     this.direccion = direccion ;
-    
+
+
     this.pantalla = 0;
     this.pantallaActual = 0;
   }
 
   botonCuadrado () {
-    fill(0);
+    fill(200);
     quad (this.x, this.y, this.x+this.ancho, this.y, this.x+this.ancho, this.y+this.ancho, this.x, this.y+this.ancho);
     if (mouseX > this.x && mouseX < (this.x+this.ancho) &&
       mouseY > this.y && mouseY < (this.y+this.alto)) {
@@ -21,10 +22,4 @@ class Boton {
       this.pantallaActual= this.direccion;
     }
   }
-
-
-
-  //if (tecla) {
-  //  this.pantalla = direccion;
-  //}
 }

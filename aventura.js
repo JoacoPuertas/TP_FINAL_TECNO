@@ -1,56 +1,54 @@
 class Aventura {
 
-  constructor () {
+  constructor (fondo, texto) {
 
     this.boton = new Boton (1, 200, 100, 100, 1);
     this.boton1 = new Boton (100, 200, 100, 100, 2);
 
-    this.fondo  = fondo;
-    this.hover  = [];
+    //OBJETO P/ DIBUJAR PANTALLA + TEXTO
+    this.pantallas = new Visual (fondo, texto);
 
+    //this.hover  = [];
+
+    // ESTAS VARIABLES HAY Q GUARDARLAS POR SI TERMINAMOS
+    // USANDO EL MÉTODO BOTÓN
     //this.pantalla = 0;
     //this.pantallaActual = 0;
   }
 
-  
+
 
   estados (fondo) {
 
     switch (this.boton.pantalla) {
 
-    case 0:
+    case 0: //PANTALLA INICIAL
 
-      background(255, 0, 0);
-      //this.xBoton = 500;
-      //this.yBoton = 200;
-      //this.anchoBoton= 100;
-      //this.altoBoton = 100;
-
-      //fill (0);
-
-      //quad (500, 200, 100, 100);
+      this.pantallas.dibujar (0, 0, 50);
 
       this.boton.botonCuadrado();
 
-      //this.boton.cambiar ();
 
       text ("this.pantallaActual: " + this.boton.pantallaActual, 100, 150);
       text ("this.pantalla: " + this.boton.pantalla, 100, 170);
 
       break;
 
-    case 1:
-      background ( 0, 255, 0 );
-      //image (fondo[1], 0, 0);
+    case 1: //PANTALLA 1
+
+      this.pantallas.dibujar (1, 1, 50);
 
       this.boton1.botonCuadrado();
+
       text ("this.pantallaActual: " + this.boton.pantallaActual, 100, 150);
       text ("this.pantalla: " + this.boton.pantalla, 100, 170);
 
       break;
 
     case 2:
+
       background ( 0, 0, 255 );
+
       this.botonCambiar (200, 200, 3, 100, 100);
 
       text ("this.pantallaActual: " + this.pantallaActual, 100, 150);
@@ -110,6 +108,9 @@ class Aventura {
     }
   }
 
+
+  //EL METODO BOTON
+  //
   //botonCambiar (x, y, direccion, ancho, alto) {
   //  fill(0);
   //  quad (x, y, x+ancho, y, x+ancho, y+ancho, x, y+ancho);
@@ -119,16 +120,4 @@ class Aventura {
   //    this.pantallaActual= direccion;
   //  }
   //}
-
-  //  cambiodeEstado (direccion) {
-
-  //    if (mouseX >= this.xBoton & mouseX <= (this.xBoton+this.anchoBoton)
-  //    & mouseY >= this.yBoton & mouseY <= (this.yBoton+this.altoBoton)) {
-
-  //      if (mouseIsPressed) {
-  //        this.pantalla = direccion
-  //      }
-  //    }
-
-  //  }
 }
