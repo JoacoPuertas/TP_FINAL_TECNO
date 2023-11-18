@@ -33,7 +33,6 @@ textFont (tipografia);
 function draw() {
   
   aventura.estados(fondo);
-  
 }
 
 function mouseClicked () {

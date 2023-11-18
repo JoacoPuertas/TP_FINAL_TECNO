@@ -25,8 +25,8 @@ class Aventura {
 
       this.pantallas.dibujar (0, 0, 50);
 
-      this.boton.ubicacionCuadrado (1, 200, 100, 100, 1);
-      this.boton.Cuadrado();
+      this.boton.botonCuadrado (210, 490, 175, 30, 1);
+      //this.boton.Cuadrado();
 
       //texto de ayuda
       text ("this.pantallaActual: " + this.boton.pantallaActual, 100, 150);
@@ -39,8 +39,8 @@ class Aventura {
       this.pantallas.dibujar (1, 1, 50);
 
 
-      this.boton.ubicacionCuadrado (100, 200, 100, 100, 2);
-      this.boton.Cuadrado();
+      this.boton.botonCuadrado (100, 225, 100, 220, 2);
+      //this.boton.Cuadrado();
 
       text ("this.pantallaActual: " + this.boton.pantallaActual, 100, 150);
       text ("this.pantalla: " + this.boton.pantalla, 100, 170);
@@ -50,6 +50,9 @@ class Aventura {
     case 2: //PANTALLA 2, ELECCIÓN PLANETAS
 
       this.pantallas.dibujar (2, 1, 50);
+      
+      this.boton.botonCircular(330,225,90,3);
+      this.boton.botonCircular(460,320,90,4);
 
       text ("this.pantallaActual: " + this.boton.pantallaActual, 100, 150);
       text ("this.pantalla: " + this.boton.pantalla, 100, 170);
@@ -57,13 +60,16 @@ class Aventura {
 
     case 3:
       background ( 0, 255, 255 );
+      
+      
+      
       text ("this.pantallaActual: " + this.boton.pantallaActual, 100, 150);
       text ("this.pantalla: " + this.boton.pantalla, 100, 170);
 
       break;
 
     case 4:
-
+      this.pantallas.dibujar (4, 1, 50);
       break;
 
     case 5:
