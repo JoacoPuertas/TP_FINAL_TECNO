@@ -2,8 +2,7 @@ class Aventura {
 
   constructor (fondo, texto) {
 
-    this.boton = new Boton (1, 200, 100, 100, 1);
-    this.boton1 = new Boton (100, 200, 100, 100, 2);
+    this.boton = new Boton ();
 
     //OBJETO P/ DIBUJAR PANTALLA + TEXTO
     this.pantallas = new Visual (fondo, texto);
@@ -26,9 +25,10 @@ class Aventura {
 
       this.pantallas.dibujar (0, 0, 50);
 
-      this.boton.botonCuadrado();
+      this.boton.ubicacionCuadrado (1, 200, 100, 100, 1);
+      this.boton.Cuadrado();
 
-
+      //texto de ayuda
       text ("this.pantallaActual: " + this.boton.pantallaActual, 100, 150);
       text ("this.pantalla: " + this.boton.pantalla, 100, 170);
 
@@ -38,27 +38,27 @@ class Aventura {
 
       this.pantallas.dibujar (1, 1, 50);
 
-      this.boton1.botonCuadrado();
+
+      this.boton.ubicacionCuadrado (100, 200, 100, 100, 2);
+      this.boton.Cuadrado();
 
       text ("this.pantallaActual: " + this.boton.pantallaActual, 100, 150);
       text ("this.pantalla: " + this.boton.pantalla, 100, 170);
 
       break;
 
-    case 2:
+    case 2: //PANTALLA 2, ELECCIÓN PLANETAS
 
-      background ( 0, 0, 255 );
+      this.pantallas.dibujar (2, 1, 50);
 
-      this.botonCambiar (200, 200, 3, 100, 100);
-
-      text ("this.pantallaActual: " + this.pantallaActual, 100, 150);
-      text ("this.pantalla: " + this.pantalla, 100, 170);
+      text ("this.pantallaActual: " + this.boton.pantallaActual, 100, 150);
+      text ("this.pantalla: " + this.boton.pantalla, 100, 170);
       break;
 
     case 3:
       background ( 0, 255, 255 );
-      text ("this.pantallaActual: " + this.pantallaActual, 100, 150);
-      text ("this.pantalla: " + this.pantalla, 100, 170);
+      text ("this.pantallaActual: " + this.boton.pantallaActual, 100, 150);
+      text ("this.pantalla: " + this.boton.pantalla, 100, 170);
 
       break;
 
