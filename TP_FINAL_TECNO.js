@@ -27,6 +27,7 @@ function preload() {
 }
 
 function mouseClicked () {
+ 
   aventura.boton.pantalla = aventura.boton.pantallaActual;
  
 }
