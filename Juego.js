@@ -33,7 +33,7 @@ class Juego {
   }
 
 
-  actualizar () {
+  actualizar (estadoAventura) {
 
     if ( this.estado == 'home') {
       this.boton ('JUGAR', 'juego', 0.85);

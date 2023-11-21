@@ -85,7 +85,7 @@ class Aventura {
 
       background (0);
       this.juego.dibujar();
-      this.juego.actualizar();
+      this.juego.actualizar(this.boton.pantalla);
       this.juego.interaccionPrincipito();
       this.boton.botonCuadrado (50, 250, 100, 240, 6);
       push();
