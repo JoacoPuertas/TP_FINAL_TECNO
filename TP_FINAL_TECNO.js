@@ -4,7 +4,7 @@ let fondo = [];
 let hover = [];
 let texto = [];
 let tipografia;
-let fondoJuego ,principito ,gavilan , vida ;
+let fondoJuego, principito, gavilan, vida ;
 
 function preload () {
   for (let i = 0; i < 13; i++) {

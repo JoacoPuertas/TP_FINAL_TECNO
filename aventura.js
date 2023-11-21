@@ -72,6 +72,7 @@ class Aventura {
     case 4:
       this.juego.dibujar();
       this.juego.actualizar();
+      this.juego.interaccionPrincipito();
       break;
 
     case 5:
