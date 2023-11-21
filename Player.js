@@ -7,15 +7,21 @@ class Player { // principito
     this.x = width / 2;
     this.y = height*0.85;
     this.principito = img;
+    this.velocidadX = 0;
     
   }
   
-  actualizar (tecla) {
-     if( tecla == LEFT_ARROW & this.x > (this.ancho)/4){
-      this.x -= 4;
-    }else if( tecla == RIGHT_ARROW & this.x < width-(this.ancho)/4){
-      this.x += 4;
+  actualizar(tecla) {
+    if (tecla === LEFT_ARROW && this.x > this.ancho / 4) {
+      this.velocidadX = -4; 
+    } else if (tecla === RIGHT_ARROW && this.x < width - this.ancho / 4) {
+      this.velocidadX = 4; 
+    } else {
+      this.velocidadX = 0; // No se presiona ninguna tecla, la velocidad es cero
     }
+
+    // Actualiza la posición basándote en la velocidad
+    this.x += this.velocidadX;
   }
   
   dibujar () {
