@@ -1,8 +1,9 @@
 class Aventura {
 
-  constructor (fondo, texto) {
+  constructor (fondo, texto , fondoJuego, img, player, enemigo) {
 
     this.boton = new Boton ();
+    this.juego = new Juego (fondoJuego, img, player, enemigo);
 
     //OBJETO P/ DIBUJAR PANTALLA + TEXTO
     this.pantallas = new Visual (fondo, texto);
@@ -69,7 +70,8 @@ class Aventura {
       break;
 
     case 4:
-      this.pantallas.dibujar (4, 1, 50);
+      this.juego.dibujar();
+      this.juego.actualizar();
       break;
 
     case 5:
