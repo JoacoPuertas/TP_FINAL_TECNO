@@ -84,13 +84,17 @@ class Aventura {
     case 5:
 
       background (0);
+      this.juego.dibujar();
+      this.juego.actualizar();
+      this.juego.interaccionPrincipito();
+      this.boton.botonCuadrado (50, 250, 100, 240, 6);
+      text("Perdiste");
 
-      this.boton.botonCuadrado (40, 250, 100, 240, 6);
-
-      this.boton.botonCuadrado (200, 250, 100, 240, 7);
-
-      this.boton.botonCuadrado (350, 250, 100, 240, 8);
-
+      this.boton.botonCuadrado (250, 250, 100, 240, 7);
+      text("Empate");
+      
+      this.boton.botonCuadrado (450, 250, 100, 240, 8);
+      text("Ganaste");
 
 
       //this.juego.dibujar();
