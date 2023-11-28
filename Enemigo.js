@@ -4,8 +4,8 @@ class Enemigo { // gavilan
     this.ancho = 100;
     this.alto = 30;
     this.x = random ( -50, 600);
-    this.y = random ( -0, -500);
-    this.vel = 5;
+    this.y = random ( -1000, -1500);
+    this.vel = random ( 4, 6);;
     this.gavilan = img;
   }
 

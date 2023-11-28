@@ -11,7 +11,7 @@ function preload () {
     fondo[i] = loadImage("data/p" + i + ".jpg");
   }
 
-  for (let i = 0; i < 21; i++) {
+  for (let i = 0; i < 22; i++) {
     hover[i] = loadImage("data/h" + i + ".png");
   }
 
@@ -29,14 +29,17 @@ function setup() {
 
   createCanvas (600, 600);
 
-  aventura = new Aventura (fondo, texto, fondoJuego, vida, principito, gavilan );
+  aventura = new Aventura (fondo, texto, fondoJuego, vida, principito, gavilan, hover );
   textFont (tipografia);
+  
 }
 
 
 function draw() {
 
   aventura.estados(fondo);
+  
+  
 }
 
 function mouseClicked () {
