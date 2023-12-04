@@ -70,12 +70,5 @@ class Boton {
     }
     
   }
-  
-  cambioDePantalla () {
-   if (mouseX > this.x && mouseX < (this.x + this.ancho) &&
-      mouseY > this.y && mouseY < (this.y + this.alto)) {
-        this.pantalla = this.pantallaActual;
-      }
-  }
 
 }
