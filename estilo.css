@@ -70,6 +70,11 @@ section {
 ol {
     margin-right: 10px;
 }
+
+.principito {
+
+    width: 50%;
+}
 footer {
     height: 100px;
     color: #888;
@@ -89,10 +94,7 @@ footer {
         align-items: center;
         margin: auto;
         justify-content: center;
-        .mate-perfecto {
-            width: 40%;
-            height: 50%;
-        }
+        
     }
     h2 {
         font-size: 1.1em;

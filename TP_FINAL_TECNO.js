@@ -46,4 +46,5 @@ function draw() {
 function mouseClicked () {
 
  this.aventura.cambioDePantalla();
+ 
 }
