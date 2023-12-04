@@ -195,7 +195,7 @@ actualizarPrinc (tecla) {
 }
 
 cambioDePantalla () {
-   this.boton.pantalla = this.boton.pantallaActual;
+   this.boton.cambioDePantalla();
 }
   
 }
