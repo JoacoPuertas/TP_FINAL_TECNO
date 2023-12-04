@@ -124,10 +124,11 @@ class Juego {
     this.contador = 1200;
     this.cantVidas = 3;
     this.principito.x = width / 2;
-
+    
+    
     //gavilan
     for (let i = 0; i < this.cantGav; i++) {
-      this.gavilan[i].reinicio();
+      this.gavilan[i].reset();
     }
   }
 }

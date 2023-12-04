@@ -2,8 +2,8 @@ class Aventura {
 
   constructor (fondo, texto, fondoJuego, img, player, enemigo, hover) {
 
-    
-    
+
+
     this.boton = new Boton (hover);
     this.juego = new Juego (fondoJuego, img, player, enemigo);
 
@@ -18,7 +18,7 @@ class Aventura {
     //this.pantallaActual = 0;
 
     this.puedeMover = true;
-    
+
     this.textY = -20 ;
     this.textYjuego = 0;
   }
@@ -31,13 +31,13 @@ class Aventura {
 
     case 0: //PANTALLA INICIAL
 
+      this.juego.reset();
       this.textY = -20;
       this.textYjuego = 0;
       this.pantallas.dibujar (0, 0, -150);
 
       this.boton.botonCuadrado (210, 490, 175, 30, 1, 0, 0);
-      //this.boton.Cuadrado();
-
+      this.boton.botonCuadrado (240, 540, 125, 25, 13, 1, 0);
       //texto de ayuda
       //text ("this.pantallaActual: " + this.boton.pantallaActual, 100, 150);
       //text ("this.pantalla: " + this.boton.pantalla, 100, 170);
@@ -99,11 +99,12 @@ class Aventura {
       this.juego.actualizar();
       this.textYjuego -= -2;
       textSize(23);
-      textAlign(CENTER,CENTER);
+      textAlign(CENTER, CENTER);
 
       fill (200);
       //text (this.juego.principito.x, 100, 100);
-
+      text("Se acerca una oleada de gavilanes", width/2, this.textYjuego);
+      text("Esquivalos para continuar el viaje", width/2, this.textYjuego + 50);
       if (this.juego.cantVidas <= 0) {
         this.boton.pantalla = 6;
 
@@ -123,13 +124,12 @@ class Aventura {
           this.juego.reset();
         }
       }
-      text("Se acerca una oleada de gavilanes", width/2, this.textYjuego);
-      text("Esquivalos para continuar el viaje", width/2, this.textYjuego + 50);
+
       pop();
       break;
 
     case 6:
-
+      this.boton.pantallaActual = 6;
       this.pantallas.dibujar (6, 5, 70);
 
       this.boton.botonCuadrado (300, 510, 65, 20, 0, 20, 1);
@@ -191,10 +191,11 @@ class Aventura {
 
     case 13: //CREDITOS
 
-      this.pantallas.dibujar(13, 0, height + 200);
+      this.pantallas.dibujar(13, 0, -150);
       fill(255);
-      this.boton.botonCuadrado (50, 260, 90, 230, 0);
+      this.boton.botonCuadrado (255, 520, 90, 25, 0, 17, 0);
       this.textY += 2;
+      push();
       textAlign(CENTER, CENTER);
       textSize(23);
       text("Creadores: Mateo Diaz - Joaquin Puertas", width/2, this.textY - 300);
@@ -204,7 +205,7 @@ class Aventura {
       if (this.textY >= height + 300) {
         this.textY = -20 ;
       }
-      
+      pop();
       break;
 
     default:
@@ -213,12 +214,13 @@ class Aventura {
     }
   }
 
-actualizarPrinc (tecla) {
-  this.juego.actualizarPrinc (tecla);
-}
+  actualizarPrinc (tecla) {
+    this.juego.actualizarPrinc (tecla);
+  }
 
-cambioDePantalla () {
-   this.boton.pantalla = this.boton.pantallaActual;
-}
-  
+  cambioDePantalla () {
+
+    this.boton.pantalla = this.boton.pantallaActual;
+    this.cambiar = false;
+  }
 }

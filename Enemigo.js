@@ -4,15 +4,15 @@ class Enemigo { // gavilan
     this.ancho = 100;
     this.alto = 30;
     this.x = random ( -50, 600);
-    this.y = random ( -1000, -1500);
-    this.vel = random ( 4, 6);;
+    this.y = random ( -800, -1500);
+    this.vel = random ( 4, 6);
     this.gavilan = img;
   }
 
   actualizar () {
     this.y += this.vel;
 
- //reinicio de enemigos
+    //reinicio de enemigos
     if (this.y > random(600, 1000) ) {
       this.reinicio ();
     }
@@ -29,12 +29,18 @@ class Enemigo { // gavilan
     this.y = random (0, -500);
     this.x = random ( -50, 600);
   }
-  
+
   getY() {
     return this.y;
   }
 
   getX() {
     return this.x;
+  }
+
+  reset() {
+    this.x = random ( -50, 600);
+    this.y = random ( -800, -1500);
+    this.vel = random ( 4, 6);
   }
 }

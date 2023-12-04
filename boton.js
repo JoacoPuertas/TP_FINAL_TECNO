@@ -12,6 +12,8 @@ class Boton {
 
     this.pantalla = 0;
     this.pantallaActual = 0;
+
+    
   }
 
   botonCuadrado (x, y, ancho, alto, direccion, hover, mostrarTexto) {
@@ -33,12 +35,13 @@ class Boton {
         push();
         fill (255)
           textAlign (CENTER);
-          textSize (18);
+        textSize (18);
         text('Click para continuar', width/2, 70);
         pop();
       }
-      
+
       this.pantallaActual = this.direccion;
+      this.cambiar = true;
     }
   }
 
@@ -54,21 +57,20 @@ class Boton {
     //ellipse(this.x, this.y, this.tam);
     //pop();
     if (dist(mouseX, mouseY, this.x, this.y) < this.tam) {
-      
+
       image (this.hover[hover], 0, 0);
 
       if (mostrarTexto == 1) {
         push();
         fill (255)
           textAlign (CENTER);
-          textSize (18);
+        textSize (18);
         text('Click para continuar', width/2, 70);
         pop();
       }
 
       this.pantallaActual = this.direccion;
+      this.cambiar = true;
     }
-    
   }
-
 }
