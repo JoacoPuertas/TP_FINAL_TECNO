@@ -1,5 +1,3 @@
-
-
 let fondo = [];
 let hover = [];
 let texto = [];
@@ -39,10 +37,13 @@ function draw() {
 
   aventura.estados(fondo);
   
-  
+  if (keyIsPressed) {
+
+     this.aventura.actualizarPrinc(keyCode);
+  }
 }
 
 function mouseClicked () {
 
-  aventura.boton.pantalla = aventura.boton.pantallaActual;
+ this.aventura.cambioDePantalla();
 }

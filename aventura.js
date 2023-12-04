@@ -190,17 +190,12 @@ class Aventura {
     }
   }
 
+actualizarPrinc (tecla) {
+  this.juego.actualizarPrinc (tecla);
+}
 
-
-  //EL METODO BOTON
-  //
-  //botonCambiar (x, y, direccion, ancho, alto) {
-  //  fill(0);
-  //  quad (x, y, x+ancho, y, x+ancho, y+ancho, x, y+ancho);
-  //  if (mouseX > x && mouseX < (x+ancho) &&
-  //    mouseY > y && mouseY < (y+alto)) {
-
-  //    this.pantallaActual= direccion;
-  //  }
-  //}
+cambioDePantalla () {
+   this.boton.pantalla = this.boton.pantallaActual;
+}
+  
 }

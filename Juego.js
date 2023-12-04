@@ -33,10 +33,13 @@ class Juego {
     this.boton = new Boton ();
   }
 
+  actualizarPrinc (tecla) {
+    this.principito.actualizar(tecla);
+  }
 
   actualizar () {
 
-    this.principito.actualizar(keyCode);
+    //this.principito.actualizar(keyCode);
 
     this.colision();
 
@@ -79,7 +82,7 @@ class Juego {
     //  textLeading (34);
     //  text ('¡UNA HORDA DE GAVILANES SE ACERCA!', width/2, height/2);
     //  pop();
-  
+
 
 
     text ("this.difTemporal: " + round(this.difTemporal), 100, 150);
@@ -120,6 +123,7 @@ class Juego {
   reset () {
     this.contador = 1200;
     this.cantVidas = 3;
+    this.principito.x = width / 2;
 
     //gavilan
     for (let i = 0; i < this.cantGav; i++) {
