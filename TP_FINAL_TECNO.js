@@ -5,7 +5,7 @@ let tipografia;
 let fondoJuego, principito, gavilan, vida ;
 
 function preload () {
-  for (let i = 0; i < 13; i++) {
+  for (let i = 0; i < 14; i++) {
     fondo[i] = loadImage("data/p" + i + ".jpg");
   }
 

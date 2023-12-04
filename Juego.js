@@ -85,8 +85,8 @@ class Juego {
 
 
 
-    text ("this.difTemporal: " + round(this.difTemporal), 100, 150);
-    text ("this.marcaTiempo: " + round(this.marcaTiempo), 100, 170);
+    //text ("this.difTemporal: " + round(this.difTemporal), 100, 150);
+    //text ("this.marcaTiempo: " + round(this.marcaTiempo), 100, 170);
 
     //dibujo principito
     this.principito.dibujar();

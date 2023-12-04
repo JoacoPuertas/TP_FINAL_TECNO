@@ -2,6 +2,8 @@ class Aventura {
 
   constructor (fondo, texto, fondoJuego, img, player, enemigo, hover) {
 
+    
+    
     this.boton = new Boton (hover);
     this.juego = new Juego (fondoJuego, img, player, enemigo);
 
@@ -16,6 +18,9 @@ class Aventura {
     //this.pantallaActual = 0;
 
     this.puedeMover = true;
+    
+    this.textY = -20 ;
+    this.textYjuego = 0;
   }
 
 
@@ -26,6 +31,8 @@ class Aventura {
 
     case 0: //PANTALLA INICIAL
 
+      this.textY = -20;
+      this.textYjuego = 0;
       this.pantallas.dibujar (0, 0, -150);
 
       this.boton.botonCuadrado (210, 490, 175, 30, 1, 0, 0);
@@ -60,7 +67,7 @@ class Aventura {
 
       //text ("this.pantallaActual: " + this.boton.pantallaActual, 100, 150);
       //text ("this.pantalla: " + this.boton.pantalla, 100, 170);
-      //break;
+      break;
 
     case 3:
 
@@ -85,11 +92,14 @@ class Aventura {
       break;
 
     case 5:
-
+      push();
+      fill(255);
       background (0);
       this.juego.dibujar();
       this.juego.actualizar();
-
+      this.textYjuego -= -2;
+      textSize(23);
+      textAlign(CENTER,CENTER);
 
       fill (200);
       //text (this.juego.principito.x, 100, 100);
@@ -113,7 +123,9 @@ class Aventura {
           this.juego.reset();
         }
       }
-      
+      text("Se acerca una oleada de gavilanes", width/2, this.textYjuego);
+      text("Esquivalos para continuar el viaje", width/2, this.textYjuego + 50);
+      pop();
       break;
 
     case 6:
@@ -179,9 +191,20 @@ class Aventura {
 
     case 13: //CREDITOS
 
-      background (0);
+      this.pantallas.dibujar(13, 0, height + 200);
+      fill(255);
       this.boton.botonCuadrado (50, 260, 90, 230, 0);
-
+      this.textY += 2;
+      textAlign(CENTER, CENTER);
+      textSize(23);
+      text("Creadores: Mateo Diaz - Joaquin Puertas", width/2, this.textY - 300);
+      text("Programadores: Mateo Diaz - Joaquin Puertas", width/2, this.textY - 200);
+      text("Diseñadores: Mateo Diaz - Joaquin Puertas", width/2, this.textY - 100);
+      text("Trabajo Final de Tecnologia Multimedial", width/2, this.textY);
+      if (this.textY >= height + 300) {
+        this.textY = -20 ;
+      }
+      
       break;
 
     default:
