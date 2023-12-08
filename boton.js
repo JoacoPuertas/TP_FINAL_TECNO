@@ -34,14 +34,13 @@ class Boton {
       if (mostrarTexto == 1) {
         push();
         fill (255)
-          textAlign (CENTER);
+        textAlign (CENTER);
         textSize (18);
         text('Click para continuar', width/2, 70);
         pop();
       }
 
       this.pantallaActual = this.direccion;
-      this.cambiar = true;
     }
   }
 
@@ -70,7 +69,6 @@ class Boton {
       }
 
       this.pantallaActual = this.direccion;
-      this.cambiar = true;
     }
   }
 }

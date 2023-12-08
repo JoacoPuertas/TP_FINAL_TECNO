@@ -1,10 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@600&family=Roboto&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+}
 
 html {
     scroll-behavior: smooth;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+} 
+/*COLORES*/
+
+.bg-blue {
+    background-color: #330093;
 }
+
+.bg-white {
+    background-color: #D1D1D1;
+}
+
+.main-color {
+    color: #D1D1D1;
+}
+
+.main-color:hover {
+    color: rgb(255, 251, 0);
+}
+
+.sec-color{
+    color: rgb(255, 251, 0);
+}
+
+.sec-color:hover{
+    color: rgb(210, 207, 3);
+}
+
+/*PAGINA*/
+
 body {
     background-color: #053C4F;
     padding: 0;
@@ -21,32 +52,68 @@ body {
     color: #9ea2a3;;
  }
 
-nav {
-    border-bottom: 1px solid #ddd;
-    border-top: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px 0;
- }
+/* NAV */ 
 
-ul {
+nav {
+    background-color: #000;
+  }
+  nav .nav {
     display: flex;
-    justify-content: space-around;
-    list-style: none;
-    margin: 0 50px;
+    justify-content: space-between;
+  }
+  nav .logo-texto {
+    width: 80%;
+  }
+  nav .burger {
+    width: 4vw;
+  }
+  nav ul {
+    margin: 0;
     padding: 0;
-}
-li {
-    margin: 5px 0;
-}
-a {
-    text-decoration: none;
-    color: #9ea2a3;
-    font-size: 1.2em;
-}
-a:hover {
-    color: #d7caaa;
-}
-section {
+  }
+  
+
+/* HISTORIA */
+
+.merendero__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .merendero__container .merendero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .merendero__container .merendero img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px;
+    outline: none;
+  }
+
+  .merendero__container .merendero {
+    max-width: 900px;
+    width: 80%;
+  }
+  @media (min-width: 992px) {
+    .merendero__container .merendero {
+      max-width: 900px;
+      width: 45%;
+    }
+  }
+  .merendero__container .merendero img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+/*section {
     text-align: center;
     margin:  0 auto;
     max-width: 95%;
@@ -99,16 +166,12 @@ footer {
     h2 {
         font-size: 1.1em;
     }
-    a{
-
-        font-size: 0.9em;
-    }
     p{
 
         margin: 15px;
     }
 
-}
+}*/
 /*.colores{
     #1e1a0f
     #3e3226

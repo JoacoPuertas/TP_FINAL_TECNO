@@ -25,7 +25,7 @@ class Aventura {
 
 
 
-  estados (fondo) {
+  estados () {
 
     switch (this.boton.pantalla) {
 
@@ -221,6 +221,5 @@ class Aventura {
   cambioDePantalla () {
 
     this.boton.pantalla = this.boton.pantallaActual;
-    this.cambiar = false;
   }
 }

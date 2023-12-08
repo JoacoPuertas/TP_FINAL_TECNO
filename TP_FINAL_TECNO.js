@@ -35,7 +35,7 @@ function setup() {
 
 function draw() {
 
-  aventura.estados(fondo);
+  aventura.estados();
   
   if (keyIsPressed) {
 
