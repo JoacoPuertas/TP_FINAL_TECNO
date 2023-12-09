@@ -17,10 +17,10 @@ function preload () {
 
   tipografia = loadFont('data/tipografia.ttf');
 
-  fondoJuego = loadImage ('data/cielo.PNG');
-  principito = loadImage ('data/principito.PNG');
-  gavilan = loadImage ('data/gavilan.PNG');
-  vida= loadImage ('data/vida.PNG');
+  fondoJuego = loadImage ('data/cielo.png');
+  principito = loadImage ('data/principito.png');
+  gavilan = loadImage ('data/gavilan.png');
+  vida= loadImage ('data/vida.png');
 }
 
 function setup() {
