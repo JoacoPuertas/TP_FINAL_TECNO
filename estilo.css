@@ -2,6 +2,8 @@
 * {
   font-family: "Poppins", sans-serif;
   list-style: none;
+  outline: none;
+  border: none;
 }
 
 html {
@@ -37,6 +39,16 @@ html {
 .footer-color {
   background-color: #121212;
   color: #AAA;
+}
+
+.btn-primario {
+  color: #D1D1D1;
+  background-color: #121212;
+}
+
+.btn-primario:hover {
+  color: #a173f6;
+  background-color: #232323;
 }
 /*PAGINA*/
 
@@ -121,6 +133,10 @@ nav {
        object-fit: cover;
   }
   
+/*NOSOTROS*/ 
+.card {
+  border: none;
+}
 /*section {
     text-align: center;
     margin:  0 auto;
